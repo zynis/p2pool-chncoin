@@ -1,3 +1,5 @@
+WARNING: Only use this for feathercoin, any other mainstream coin see https://github.com/forrestv/p2pool
+
 Changes for using this for Feathercoin
 - Use --net feathercoin
 - ltc-scrypt module need to be install ( Same as litecoin used, and its included in the files )
