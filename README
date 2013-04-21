@@ -1,3 +1,18 @@
+Changes for using this for Feathercoin
+- Use --net feathercoin
+- ltc-scrypt module need to be install ( Same as litecoin used, and its included in the files )
+
+Example on running p2pool
+screen -d -m -S fcpool ~/p2pool/run_p2pool.py --net feathercoin -a YourFCaddress -f 3 --give-author 0 --w 19327 --bitcoind-p2p-port 9336 --bitcoind-rpc-port 9337 rpcuser rpcpass
+
+-f is fee percent
+--w port you connect browser and miner to
+
+It should connect to other feathercoin p2pools automatic
+
+Still test code
+
+------------------------------
 Requirements:
     Generic:
         Bitcoin >=0.6.4
