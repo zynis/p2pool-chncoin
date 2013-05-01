@@ -47,22 +47,23 @@ nets = dict(
     
     litecoin=math.Object(
         PARENT=networks.nets['litecoin'],
-        SHARE_PERIOD=10, # seconds
+        SHARE_PERIOD=30, # seconds
         CHAIN_LENGTH=24*60*60//10, # shares
         REAL_CHAIN_LENGTH=24*60*60//10, # shares
         TARGET_LOOKBEHIND=200, # shares
-        SPREAD=12, # blocks
+        SPREAD=120, # blocks
         IDENTIFIER='e037d5b8c6923410'.decode('hex'),
         PREFIX='7208c1a53ef629b0'.decode('hex'),
-        P2P_PORT=9338,
+        P2P_PORT=8668,
         MIN_TARGET=0,
         MAX_TARGET=2**256//2**20 - 1,
-        PERSIST=True,
-        WORKER_PORT=9327,
-        BOOTSTRAP_ADDRS='forre.st vps.forre.st 199.255.95.94 75.12.89.18 181.28.244.151 83.142.189.132 66.90.82.155:11332 201.57.241.77 80.222.255.91 142.68.214.29 24.52.247.82 72.230.179.177 94.127.200.29 200.204.161.215 91.121.9.7 91.235.254.37 198.154.98.195 178.79.136.10'.split(' '),
+        PERSIST=False,
+        WORKER_PORT=8800,
+        BOOTSTRAP_ADDRS='p2pool.chnco.in'.split(' '),
         ANNOUNCE_CHANNEL='#p2pool-alt',
         VERSION_CHECK=lambda v: True,
     ),
+
     litecoin_testnet=math.Object(
         PARENT=networks.nets['litecoin_testnet'],
         SHARE_PERIOD=3, # seconds
@@ -115,24 +116,6 @@ nets = dict(
         PERSIST=False,
         WORKER_PORT=19322,
         BOOTSTRAP_ADDRS='seed1.p2pool.terracoin.org seed2.p2pool.terracoin.org forre.st vps.forre.st'.split(' '),
-        ANNOUNCE_CHANNEL='#p2pool-alt',
-        VERSION_CHECK=lambda v: True,
-    ),
-    feathercoin=math.Object(
-        PARENT=networks.nets['feathercoin'],
-        SHARE_PERIOD=30, # seconds
-        CHAIN_LENGTH=60*60//10, # shares
-        REAL_CHAIN_LENGTH=60*60//10, # shares
-        TARGET_LOOKBEHIND=200, # shares
-        SPREAD=120, # blocks
-        IDENTIFIER='e037d5b8c6923410'.decode('hex'),
-        PREFIX='7208c1a53ef629b0'.decode('hex'),
-        P2P_PORT=19339,
-        MIN_TARGET=0,
-        MAX_TARGET=2**256//2**20 - 1,
-        PERSIST=False,
-        WORKER_PORT=19327,
-        BOOTSTRAP_ADDRS='pool.feathercoin.cc fpool1.zapto.org'.split(' '),
         ANNOUNCE_CHANNEL='#p2pool-alt',
         VERSION_CHECK=lambda v: True,
     ),
