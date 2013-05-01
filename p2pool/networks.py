@@ -59,7 +59,7 @@ nets = dict(
         MAX_TARGET=2**256//2**20 - 1,
         PERSIST=False,
         WORKER_PORT=8800,
-        BOOTSTRAP_ADDRS='p2pool.chnco.in'.split(' '),
+        BOOTSTRAP_ADDRS='p2pool.chnco.in pool01.chnco.in'.split(' '),
         ANNOUNCE_CHANNEL='#p2pool-alt',
         VERSION_CHECK=lambda v: True,
     ),
