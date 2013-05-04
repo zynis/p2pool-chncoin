@@ -99,8 +99,8 @@ nets = dict(
         BLOCK_PERIOD=60, # s
         SYMBOL='CNC',
         CONF_FILE_FUNC=lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'chncoin') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/chncoin/') if platform.system() == 'Darwin' else os.path.expanduser('~/.chncoin'), 'chncoin.conf'),
-        BLOCK_EXPLORER_URL_PREFIX='http://explorer.litecoin.net/block/',
-        ADDRESS_EXPLORER_URL_PREFIX='http://explorer.litecoin.net/address/',
+        BLOCK_EXPLORER_URL_PREFIX='http://cnc.cryptocoinexplorer.com/block/',
+        ADDRESS_EXPLORER_URL_PREFIX='http://cnc.cryptocoinexplorer.com/address/',
         SANE_TARGET_RANGE=(2**256//1000000000 - 1, 2**256//1000 - 1),
         DUMB_SCRYPT_DIFF=2**16,
     ),
