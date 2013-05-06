@@ -47,19 +47,19 @@ nets = dict(
     
     litecoin=math.Object(
         PARENT=networks.nets['litecoin'],
-        SHARE_PERIOD=5, # seconds
+        SHARE_PERIOD=15, # seconds
         CHAIN_LENGTH=12*60*60//10, # shares
         REAL_CHAIN_LENGTH=12*60*60//10, # shares
         TARGET_LOOKBEHIND=200, # shares
-        SPREAD=3, # blocks
-        IDENTIFIER='e037d5b8c6923410'.decode('hex'),
-        PREFIX='7208c1a53ef629b0'.decode('hex'),
-        P2P_PORT=12388,
+        SPREAD=30, # blocks
+        IDENTIFIER='e137d5b8c6923410'.decode('hex'),
+        PREFIX='7218c1a53ef629b0'.decode('hex'),
+        P2P_PORT=13388,
         MIN_TARGET=0,
         MAX_TARGET=2**256//2**20 - 1,
         PERSIST=False,
         WORKER_PORT=8800,
-        BOOTSTRAP_ADDRS='p2pool.chnco.in pool01.chnco.in'.split(' '),
+        BOOTSTRAP_ADDRS='pool01-cnc.coinloot.com'.split(' '),
         ANNOUNCE_CHANNEL='#p2pool-alt',
         VERSION_CHECK=lambda v: True,
     ),
